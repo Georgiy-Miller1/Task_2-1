@@ -21,7 +21,25 @@ namespace Task_2_1
          */
         static void Main(string[] args)
         {
-            Console.WriteLine("");
+            Console.WriteLine("Введите сумму гривен которую вы хотите обменять...");
+            double sum_ua = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Введите валюту которую хотите конвертировать в гривну...1-usd,2-eur,3-rub");
+            double currency = Convert.ToDouble(Console.ReadLine());
+            switch (currency)
+            {
+                case 1:
+                    Console.WriteLine($"Вы получите {sum_ua * 0.027} usd"); 
+                    break;
+                case 2:
+                    Console.WriteLine($"Вы получите {sum_ua * 0.25} eur");
+                    break;
+                case 3:
+                    Console.WriteLine($"Вы получите {sum_ua * 1.91} rub");
+                    break;
+                default:
+                    break;
+            }
         }
        
     }
