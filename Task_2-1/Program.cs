@@ -26,20 +26,23 @@ namespace Task_2_1
 
             Console.WriteLine("Введите валюту которую хотите конвертировать в гривну...1-usd,2-eur,3-rub");
             double currency = Convert.ToDouble(Console.ReadLine());
+
+            Converter converter = new Converter(sum_ua);
             switch (currency)
             {
                 case 1:
-                    Console.WriteLine($"Вы получите {sum_ua * 0.027} usd"); 
+                    converter.usd_convert(sum_ua); 
                     break;
                 case 2:
-                    Console.WriteLine($"Вы получите {sum_ua * 0.25} eur");
+                    converter.eur_converter(sum_ua);
                     break;
                 case 3:
-                    Console.WriteLine($"Вы получите {sum_ua * 1.91} rub");
+                    converter.rub_converter(sum_ua);
                     break;
                 default:
                     break;
             }
+            Console.ReadKey();
         }
        
     }

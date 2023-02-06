@@ -8,7 +8,7 @@ namespace Task_2_1
 {
     class Converter
     {
-        double usd, eur, rub;
+        double usd, eur, rub,sum_ua;
         public Converter(double usd, double eur, double rub)
         {
             this.usd = usd;
@@ -16,9 +16,25 @@ namespace Task_2_1
             this.rub = rub;
         }
 
-        public double usd_convert()
+        public Converter(double sum_ua)
+        {
+            this.sum_ua = sum_ua;
+        }
+
+
+        public void usd_convert(double sum_ua)
         {
             Console.WriteLine($"Вы получите {sum_ua * 0.027} usd");
+        }
+
+        public void eur_converter(double sum_ua)
+        {
+            Console.WriteLine($"Вы получите {sum_ua * 0.25} eur");
+        }
+
+        public void rub_converter(double sum_ua)
+        {
+            Console.WriteLine($"Вы получите {sum_ua * 1.91} rub");
         }
     }
 }
