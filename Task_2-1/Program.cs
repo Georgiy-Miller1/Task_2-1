@@ -24,5 +24,9 @@ namespace Task_2_1
             decimal ua, usd, eur, rub;
             Console.WriteLine("");
         }
+        static decimal Add(decimal ua,decimal rub)
+        {
+            return ua * rub;
+        }
     }
 }
