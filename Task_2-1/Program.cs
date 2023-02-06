@@ -28,6 +28,10 @@ namespace Task_2_1
         {
             return ua * rub;
         }
+        static decimal Converter(valuta)
+        {
+
+        }
         static double Kalc(int operand1,int operand2)
         {
             return result;
