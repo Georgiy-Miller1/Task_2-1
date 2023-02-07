@@ -36,5 +36,20 @@ namespace Task_2_1
         {
             Console.WriteLine($"Вы получите {sum_ua * 1.91} rub");
         }
+
+        public void from_usd(double sum_corrency)
+        {
+            Console.WriteLine($"Вы получите {sum_corrency * 36.93} грн");
+        }
+
+        public void from_eur(double sum_corrency)
+        {
+            Console.WriteLine($"Вы получите {sum_corrency * 39.81} грн");
+        }
+
+        public void from_rub(Double sum_corrency)
+        {
+            Console.WriteLine($"Вы получите {sum_corrency * 0.52} грн");
+        }
     }
 }

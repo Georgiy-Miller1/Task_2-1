@@ -21,27 +21,59 @@ namespace Task_2_1
          */
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите сумму гривен которую вы хотите обменять...");
-            double sum_ua = Convert.ToDouble(Console.ReadLine());
-
-            Console.WriteLine("Введите валюту которую хотите конвертировать в гривну...1-usd,2-eur,3-rub");
-            double currency = Convert.ToDouble(Console.ReadLine());
-
-            Converter converter = new Converter(sum_ua);
-            switch (currency)
+            Console.WriteLine("Поменять гривны на другую валюту нажмите 1,поменять валюту на гривну нажмите 2...");
+            int exchange = Convert.ToInt32(Console.ReadLine());
+            if(exchange == 1)
             {
-                case 1:
-                    converter.usd_convert(sum_ua); 
-                    break;
-                case 2:
-                    converter.eur_converter(sum_ua);
-                    break;
-                case 3:
-                    converter.rub_converter(sum_ua);
-                    break;
-                default:
-                    break;
+                Console.WriteLine("Введите сумму гривен которую вы хотите обменять...");
+                double sum_ua = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine("Введите валюту которую на которую вы хотите поменять гривну:1-usd,2-eur,3-rub");
+                double currency_from = Convert.ToDouble(Console.ReadLine());
+
+                Converter converter = new Converter(sum_ua);
+                switch (currency_from)
+                {
+                    case 1:
+                        converter.usd_convert(sum_ua);
+                        break;
+                    case 2:
+                        converter.eur_converter(sum_ua);
+                        break;
+                    case 3:
+                        converter.rub_converter(sum_ua);
+                        break;
+                    default:
+                        break;
+                }
+              
             }
+            else if (exchange == 2)
+            {
+                Console.WriteLine("Какую валюту хотите обменять на гривну:1-usd,2-eur,3-rub");
+                int currency_in = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Введите сумму валюты которую вы хотите обменять на гривну...");
+                double sum_corrency = Convert.ToDouble(Console.ReadLine());
+
+                Converter converter = new Converter(sum_corrency);
+
+                switch (currency_in)
+                {
+                    case 1:
+                        converter.from_usd(sum_corrency);
+                        break;
+                    case 2:
+                        converter.from_eur(sum_corrency);
+                        break;
+                    case 3:
+                        converter.from_rub(sum_corrency);
+                        break;
+                    default:
+                        break;
+                }
+            }
+
             Console.ReadKey();
         }
        
