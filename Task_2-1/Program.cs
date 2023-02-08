@@ -73,7 +73,8 @@ namespace Task_2_1
                         break;
                 }
             }
-
+            
+            Console.WriteLine("!!!!!!!!!!!!");
             Console.WriteLine("Goodbye");
 
             Console.ReadKey();
