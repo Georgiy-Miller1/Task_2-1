@@ -74,6 +74,8 @@ namespace Task_2_1
                 }
             }
 
+            Console.WriteLine("Goodbye");
+
             Console.ReadKey();
         }
        
